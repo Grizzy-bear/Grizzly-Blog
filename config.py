@@ -12,7 +12,7 @@ class Config:
     SECRET_KEY = 'a string'
     # 数据库配置
     # SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://blog:132942blog@localhost/Blogfirst?charset=utf8mb4'
+    SQLALCHEMY_DATABASE_URI = ''
     # SQLALCHEMY_TRACK_MODIFICATIONS = True
     # SQLALCHEMY_COMMIT_TEARDOWN = True
     SQLALCHEMY_TRACK_MODIFICATIONS = True
@@ -30,19 +30,19 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://blog:132942blog@localhost/Blogfirst?charset=utf8mb4' #数据库链接，我使用的是mysql
+    SQLALCHEMY_DATABASE_URI = '' #数据库链接，我使用的是mysql
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 
 class TestingConfig(Config):
     TESTING = True
     WTF_CSRF_ENABLED = False
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://blog:132942blog@localhost/Blogfirst?charset=utf8mb4'
+    SQLALCHEMY_DATABASE_URI = ''
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://blog:132942blog@localhost/Blogfirst?charset=utf8mb4'
+    SQLALCHEMY_DATABASE_URI = ''
     SQLALCHEMY_TRACK_MODIFICATIONS = True
 
 
