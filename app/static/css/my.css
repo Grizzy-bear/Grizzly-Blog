@@ -1,0 +1,13 @@
+.contactMe-word{
+    margin-top: 200px !important;
+    /* vertical-align: middle; */
+    -webkit-font-smoothing: antialiased;
+}
+/* .img_con{
+    display: inline;
+    width: 50%;
+    height: 50%;
+} */
+.img-responsive{
+    height: 80px !important;
+}

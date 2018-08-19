@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %} 
+
+{% set active = "" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/my.css') }}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="col-md-8 col-md-offset-2 text-center js-fullheight slider-text contactMe-word" >
+        <div class="col-md-6 col-md-offset-4 text-center">
+            <img src="{{url_for('static',filename='images/02.png')}}" class="img-responsive animate-box" data-animate-effect="fadeInLeft" alt="Image">
+        </div>
+        
+        <div class="col-md-6 col-md-offset-4 text-center">
+            <div class="slider-text-inner">
+                <h2 class="animate-box" data-animate-effect="fadeInLeft">很抱歉,只是一个链接..........</h2>
+
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}
