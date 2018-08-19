@@ -22,13 +22,17 @@ def portfolio():
     return render_template('/blog/portfolio.html')
 
 @auth.route('/about', endpoint='About')
-def portfolio():
+def about():
     return render_template('/blog/about.html')
 
 @auth.route('/contact', endpoint='Contact')
-def portfolio():
+def contact():
     return render_template('/blog/contact.html')
 
 @auth.route('/contactMe', endpoint='ContactMe')
-def portfolio():
+def contactMe():
     return render_template('/contact/contactMe.html')
+
+@auth.route('/thanks', endpoint='Thanks')
+def thanks():
+    return render_template('/blog/thanks.html')

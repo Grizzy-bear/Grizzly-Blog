@@ -1,5 +1,5 @@
 # coding=utf-8
-from flask import Flask
+from flask import Flask 
 from flask_sqlalchemy import SQLAlchemy
 # from flask.ext.bootstrap import Bootstrap
 from flask_bootstrap import Bootstrap
@@ -15,6 +15,9 @@ login_manager.login_view = 'auth.login'
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 db = SQLAlchemy()
+from app.models.blog import Blog, Portfolio, Test
+from app.models.discuss import Discuss
+
 bootstrap = Bootstrap()
 
 def create_app():
@@ -26,7 +29,7 @@ def create_app():
 
     bootstrap.init_app(app)
     db.init_app(app)
-    db.app = app
+    # db.app = app
     # 注册蓝本
     # 增加auth蓝本
     from app.auth import auth as auth_blueprint
@@ -43,26 +46,6 @@ def create_app():
     # 国际化
     from flask_babelex import Babel
     babel = Babel(app)
-
-    # 注册admin
-    # admin = Admin(app, name='后台管理', template_mode='bootstrap3', base_template='admin/index.html')
-    # 修改源admin主页
-    # admin = Admin(
-    #     app,
-    #     index_view=AdminIndexView(
-    #         name=u'导航栏',
-    #         template='welcome.html',
-    #         url='/admin'
-    #     )
-    # )
-
-    # from .models.blog import Blog,Portfolio
-    # from flask_admin.contrib.sqla import ModelView
-    # # from apps.ModelView import
-    # # admin.add_view(ModelView())
-    # from app.models.adminModel import BlogView,MyView
-    # admin.add_view(BlogView(db.session, name = u'博客文章管理'))
-    # admin.add_view(MyView(name=u'发表文章'))
 
 
     return app

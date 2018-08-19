@@ -27,8 +27,8 @@ class Blog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
 
 
-    name = db.Column(db.String(50), nullable=False)
-    image = db.Column(db.LargeBinary,nullable=False)
+    names = db.Column(db.String(50), nullable=False)
+    images = db.Column(db.LargeBinary,nullable=False)
     content = db.Column(db.Text,nullable=False)
     create_time  = db.Column(db.DateTime, nullable=True,default=datetime.date.today())
 
