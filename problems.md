@@ -49,3 +49,21 @@ from class Test(db.Model):
 
 ----------------------------------------------
 * 记下来就是，数据库与前端的交互了，先从管理界面开始还是从前端开始呢？
+
+---
+* 修改mysql字段类型
+```
+mysql> alter table 表名 modify column 字段名 类型;
+例如
+
+数据库中address表 city字段是varchar(30)
+
+修改类型可以用（谨慎修改类型，可能会导致原有数据出错）
+
+mysql> alter table address modify column city char(30);
+
+修改长度可以用（修改长度，要保证不短与已有数据，以保证原有数据不出错）
+
+mysql> alter table address modify column city varchar(50);
+```
+

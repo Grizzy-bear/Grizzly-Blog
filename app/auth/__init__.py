@@ -5,4 +5,4 @@ auth = Blueprint('auth', __name__,url_prefix='/auth')
 
 
 # from .users import *
-from . import views, error 
+from . import views, error
